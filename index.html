@@ -1,0 +1,82 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prímszám Generátor</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.min.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./images/icons8-add-64.png" alt="Add" width="50" height="50" />
+      <h1 class="title">TESZT FELADAT</h1>
+
+      <form class="prime-form" id="prime-generator-form">
+        <label class="prime-form__first-label" for="prime-count"
+          >Ennyi prímszámot kérek:</label
+        >
+        <input
+          class="prime-form__first-input"
+          type="number"
+          id="prime-count"
+          min="1"
+          step="1"
+          required
+        />
+
+        <label class="prime-form__second-label" for="last-digit"
+          >Ami ilyen számjeggyel végződik:</label
+        >
+        <div class="costum-select">
+          <select class="prime-form__second-input" id="last-digit">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+          <svg class="costum-select__icon">
+            <use href="./symbol-defs.svg#icon-triangle-down"></use>
+          </svg>
+        </div>
+        <button type="button" id="generate-button">Generálás</button>
+      </form>
+
+      <div id="loading" class="loading">
+        <span>Loading...</span>
+      </div>
+
+      <div id="result" class="result"></div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

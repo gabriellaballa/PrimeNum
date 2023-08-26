@@ -1,0 +1,41 @@
+/** @format */
+
+$glass: #33485d;
+$glass-icon: #f0c31c;
+$gradient: linear-gradient(35deg, red, purple);
+$option: #33485d;
+
+body {
+  background: $gradient;
+}
+
+/* <select> styles */
+select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: linear-gradient(to left, $glass-icon 2em, $glass 2em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  option {
+    color: inherit;
+    background-color: $option;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+}
